@@ -10,6 +10,7 @@
 static struct BOARD_DESC *board_list[] = {
     &walnutpi_1b,
     &walnutpi_1b_emmc,
+    &walnutpi_2b,
 };
 
 static struct BOARD_DESC *now_board_desc = NULL;
