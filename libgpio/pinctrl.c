@@ -113,7 +113,6 @@ void gpio_set_mode(int gpio_num, int mode)
 {
     if (geteuid() == 0)
     {
-        printf("call core_gpio_set_mode \n");
         core_gpio_set_mode(gpio_num, mode);
     }
     else
