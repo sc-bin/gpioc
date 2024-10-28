@@ -292,7 +292,7 @@ int sunxi_init()
 
             int address_cells = dtb_get_address_cells(path_soc);
             int size_cells = dtb_get_size_cells(path_soc);
-            dtb_get_reg_number(path_pinctrl, address_cells, size_cells,&men_reg, &men_offset);
+            dtb_get_reg_number(path_pinctrl, address_cells, size_cells, &men_reg, &men_offset);
             fd_mem = open("/dev/mem", O_RDWR);
 
             if (fd_mem < 0)
@@ -303,11 +303,27 @@ int sunxi_init()
             }
 
             uint8_t *mmap_gpio = (uint8_t *)mmap(0, men_offset, PROT_READ | PROT_WRITE, MAP_SHARED, fd_mem, men_reg);
+
+            int bank_mem_size = sunxi_pinctrl_hw_info[pinctrl_desc->hw_type].bank_mem_size;
+            struct sunxi_pinctrl_hw_info *reg_info = &sunxi_pinctrl_hw_info[pinctrl_desc->hw_type];
+            const struct sunxi_desc_pin *pins = pinctrl_desc->pins;
+            int bank_offset;
+            int pin_num;
+            struct pins *_pins_p;
             for (int i = 0; i < pinctrl_desc->npins; i++)
             {
-                _pins[pinctrl_desc->pins[i].pin.number].pinctrl_desc = &(pinctrl_desc->pins[i]);
-                _pins[pinctrl_desc->pins[i].pin.number].mem_bank_base = mmap_gpio + ((pinctrl_desc->pins[i].pin.number) / 32 * sunxi_pinctrl_hw_info[pinctrl_desc->hw_type].bank_mem_size);
-                _pins[pinctrl_desc->pins[i].pin.number].reg_info = &sunxi_pinctrl_hw_info[pinctrl_desc->hw_type];
+                pin_num = pins[i].pin.number;
+                _pins_p = &_pins[pin_num];
+                _pins_p->pinctrl_desc = &(pinctrl_desc->pins[i]);
+                _pins_p->reg_info = reg_info;
+
+                if ((pin_num >= PK_BASE) && (pin_num < (PK_BASE + 32)))
+                {
+                    bank_offset = 0x500;
+                }
+                else
+                    bank_offset = pin_num / 32 * bank_mem_size;
+                _pins_p->mem_bank_base = mmap_gpio + bank_offset;
             }
         }
     }
@@ -325,6 +341,11 @@ void sunxi_pin_set_mode(int gpio_num, int mode)
     unsigned int bank = gpio_num >> 5;
     unsigned int index = gpio_num - (bank << 5);
     int offset = ((index - ((index >> 3) << 3)) << 2);
+    printf("bank = %d \n", bank);
+    printf("index = %d \n", index);
+    printf("offset = %d \n", offset);
+    printf("((index >> 3) << 2) = %d \n", ((index >> 3) << 2));
+    printf("_pins[gpio_num].reg_info->mux_regs_offset = %s \n", _pins[gpio_num].pinctrl_desc->functions->name);
 
     uint32_t *reg;
     reg = (uint32_t *)(_pins[gpio_num].mem_bank_base + _pins[gpio_num].reg_info->mux_regs_offset + ((index >> 3) << 2));
@@ -342,9 +363,11 @@ void sunxi_pin_set_mode(int gpio_num, int mode)
     default:
         break;
     }
+    printf("val=%x\n", val);
 
     val &= ~(7 << offset);
     val |= (mode << offset);
+    printf("val=%x\n", val);
     *reg = val;
 }
 int sunxi_pin_get_mode(int gpio_num)
@@ -361,7 +384,7 @@ int sunxi_pin_get_mode(int gpio_num)
     {
         return 0xff;
     }
-    reg = (uint32_t *)(_pins[gpio_num].mem_bank_base + _pins[gpio_num].reg_info->mux_regs_offset +((index >> 3) << 2));
+    reg = (uint32_t *)(_pins[gpio_num].mem_bank_base + _pins[gpio_num].reg_info->mux_regs_offset + ((index >> 3) << 2));
 
     val = *reg;
     mode = (val >> offset) & 0xf;
