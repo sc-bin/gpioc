@@ -46,38 +46,82 @@ struct BOARD_PIN walnutpi2b_pins[] = {
     DEF_A_BOARD_PIN(41, PB7, "KEY", PH_COLOR_BLACK),
     DEF_A_BOARD_PIN(42, PB8, "LED", PH_COLOR_BLACK),
 };
-static int walnutpi2b_pwms_pins[] = {0};
-static int walnutpi2b_pwms_modes[] = {0};
+
+static struct PIN_with_PER PIN_PER_PWM[] = {
+    DEF_A_BOARD_PIN_PER(5, 5),
+    DEF_A_BOARD_PIN_PER(7, 5),
+    DEF_A_BOARD_PIN_PER(13, 4),
+    DEF_A_BOARD_PIN_PER(15, 4),
+    DEF_A_BOARD_PIN_PER(19, 4),
+    DEF_A_BOARD_PIN_PER(21, 4),
+    DEF_A_BOARD_PIN_PER(23, 4),
+    DEF_A_BOARD_PIN_PER(27, 4),
+    DEF_A_BOARD_PIN_PER(29, 3),
+    DEF_A_BOARD_PIN_PER(31, 4),
+    DEF_A_BOARD_PIN_PER(33, 4),
+    DEF_A_BOARD_PIN_PER(35, 4),
+    DEF_A_BOARD_PIN_PER(37, 4),
+    DEF_A_BOARD_PIN_PER(16, 4),
+    DEF_A_BOARD_PIN_PER(22, 4),
+    DEF_A_BOARD_PIN_PER(24, 4),
+    DEF_A_BOARD_PIN_PER(26, 4),
+    DEF_A_BOARD_PIN_PER(28, 4),
+    DEF_A_BOARD_PIN_PER(32, 4),
+    DEF_A_BOARD_PIN_PER(36, 4),
+    DEF_A_BOARD_PIN_PER(38, 4),
+    DEF_A_BOARD_PIN_PER(40, 4),
+};
 static struct BOARD_PIN_PER walnutpi2b_pwms =
     {
-        .count = 0,
-        .pins = walnutpi2b_pwms_pins,
-        .modes = walnutpi2b_pwms_modes,
+        .count = sizeof(PIN_PER_PWM) / sizeof(struct PIN_with_PER),
+        .the_pins = PIN_PER_PWM,
 };
+static struct PIN_with_PER PIN_PER_UART[] = {
+    DEF_A_BOARD_PIN_PER(11, 3),
+    DEF_A_BOARD_PIN_PER(13, 2),
+    DEF_A_BOARD_PIN_PER(15, 2),
+    DEF_A_BOARD_PIN_PER(23, 2),
+    DEF_A_BOARD_PIN_PER(35, 2),
+    DEF_A_BOARD_PIN_PER(37, 2),
+    DEF_A_BOARD_PIN_PER(8, 2),
+    DEF_A_BOARD_PIN_PER(10, 2),
+    DEF_A_BOARD_PIN_PER(12, 3),
+    DEF_A_BOARD_PIN_PER(22, 2),
+    DEF_A_BOARD_PIN_PER(24, 2),
+    DEF_A_BOARD_PIN_PER(26, 2),
+    DEF_A_BOARD_PIN_PER(38, 3),
+    DEF_A_BOARD_PIN_PER(40, 3),
 
-static int walnutpi2b_uarts_pins[] = {0};
-static int walnutpi2b_uarts_modes[] = {0};
+};
 static struct BOARD_PIN_PER walnutpi2b_uarts =
     {
-        .count = 0,
-        .pins = walnutpi2b_uarts_pins,
-        .modes = walnutpi2b_uarts_modes,
+        .count = sizeof(PIN_PER_UART) / sizeof(struct PIN_with_PER),
+        .the_pins = PIN_PER_UART,
 };
-static int walnutpi2b_spis_pins[] = {0};
-static int walnutpi2b_spis_modes[] = {0};
+
+static struct PIN_with_PER PIN_PER_SPI[] = {
+    DEF_A_BOARD_PIN_PER(19, 3),
+    DEF_A_BOARD_PIN_PER(21, 3),
+    DEF_A_BOARD_PIN_PER(23, 3),
+    DEF_A_BOARD_PIN_PER(24, 3),
+    DEF_A_BOARD_PIN_PER(26, 1),
+};
 static struct BOARD_PIN_PER walnutpi2b_spis =
     {
-        .count = 0,
-        .pins = walnutpi2b_spis_pins,
-        .modes = walnutpi2b_spis_modes,
+        .count = sizeof(PIN_PER_SPI) / sizeof(struct PIN_with_PER),
+        .the_pins = PIN_PER_SPI,
 };
-static int walnutpi2b_i2cs_pins[] = {0};
-static int walnutpi2b_i2cs_modes[] = {0};
+
+static struct PIN_with_PER PIN_PER_I2C[] = {
+    DEF_A_BOARD_PIN_PER(3, 2),
+    DEF_A_BOARD_PIN_PER(5, 2),
+    DEF_A_BOARD_PIN_PER(27, 3),
+    DEF_A_BOARD_PIN_PER(28, 3),
+};
 static struct BOARD_PIN_PER walnutpi2b_i2cs =
     {
-        .count = 0,
-        .pins = walnutpi2b_i2cs_pins,
-        .modes = walnutpi2b_i2cs_modes,
+        .count = sizeof(PIN_PER_I2C) / sizeof(struct PIN_with_PER),
+        .the_pins = PIN_PER_I2C,
 };
 struct BOARD_DESC walnutpi_2b = {
     .model = "walnutpi-2b",

@@ -23,18 +23,27 @@ struct BOARD_PIN
     int color;    // 引脚颜色
 };
 #define DEF_A_BOARD_PIN(_pin_num, _gpio_num, _name, _color) \
-    {                                                   \
-        .pin_num = _pin_num,                            \
-        .gpio_num = _gpio_num,                          \
-        .name = _name,                                  \
-        .color = _color,                                \
+    {                                                       \
+        .pin_num = _pin_num,                                \
+        .gpio_num = _gpio_num,                              \
+        .name = _name,                                      \
+        .color = _color,                                    \
     }
+#define DEF_A_BOARD_PIN_PER(_pin, _mode) \
+    {                                    \
+        .pin = _pin,                     \
+        .mode = _mode,                   \
+    }
+struct PIN_with_PER
+{
+    int pin;  // 对应开发板上哪个引脚
+    int mode; // 对应该引脚的复用功能几
+};
 
 struct BOARD_PIN_PER
 {
     int count;  // 共有几个引脚
-    int *pins;  // 哪些引脚
-    int *modes; // 对应引脚需要设置为什么模式
+    struct PIN_with_PER *the_pins;
 };
 
 struct BOARD_DESC

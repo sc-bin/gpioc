@@ -440,16 +440,16 @@ void print_pin_by_mode_name(char *str)
 
     if (strcasecmp(str, "pwm") == 0)
         for (int i = 0; i < now_board_desc->pwms->count; i++)
-            pins[now_board_desc->pwms->pins[i]] = now_board_desc->pwms->modes[i];
+            pins[now_board_desc->pwms->the_pins[i].pin] = now_board_desc->pwms->the_pins[i].mode;
     else if (strcasecmp(str, "uart") == 0)
         for (int i = 0; i < now_board_desc->uarts->count; i++)
-            pins[now_board_desc->uarts->pins[i]] = now_board_desc->uarts->modes[i];
+            pins[now_board_desc->uarts->the_pins[i].pin] = now_board_desc->uarts->the_pins[i].mode;
     else if (strcasecmp(str, "i2c") == 0)
         for (int i = 0; i < now_board_desc->i2cs->count; i++)
-            pins[now_board_desc->i2cs->pins[i]] = now_board_desc->i2cs->modes[i];
+            pins[now_board_desc->i2cs->the_pins[i].pin] = now_board_desc->i2cs->the_pins[i].mode;
     else if (strcasecmp(str, "spi") == 0)
         for (int i = 0; i < now_board_desc->spis->count; i++)
-            pins[now_board_desc->spis->pins[i]] = now_board_desc->spis->modes[i];
+            pins[now_board_desc->spis->the_pins[i].pin] = now_board_desc->spis->the_pins[i].mode;
     printf("+-----------+------+----------+------+-----------+\n");
     printf("|    Mode   | Name | Physical | Name |    Mode   |\n");
     printf("+-----------+------+----------+------+-----------+\n");
