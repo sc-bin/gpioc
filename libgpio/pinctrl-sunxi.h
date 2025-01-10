@@ -372,4 +372,7 @@ extern void sunxi_gpio_write(int gpio_num, int value);
 extern void sunxi_gpio_set_PullUpDn (int gpio_num, int pud);
 
 extern void sunxi_print_who_has_function(char *name_buf, int len);
+
+extern void sunxi_gpio_mode_rename(int gpio_num, int mode_num, char *name);
+
 #endif

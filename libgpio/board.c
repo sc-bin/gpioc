@@ -40,6 +40,16 @@ struct BOARD_DESC *get_board_desc()
         if (strcmp(model, board_list[i]->model) == 0)
         {
             now_board_desc = board_list[i];
+            if (now_board_desc->mode_renames != NULL)
+            {
+                struct BOARD_mode_rename *board_reanme_pins = now_board_desc->mode_renames;
+
+                for (int pin = 0; pin < board_reanme_pins->count; pin++)
+                {
+                    struct PIN_mode_rename *rename_pin = &(board_reanme_pins->the_pins[pin]);
+                    gpio_mode_rename(rename_pin->pin, rename_pin->mode, rename_pin->newname);
+                }
+            }
             return now_board_desc;
         }
     }

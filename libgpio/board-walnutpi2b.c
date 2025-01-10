@@ -1,6 +1,5 @@
 #include "board-pin.h"
 #include "pin-num.h"
-
 struct BOARD_PIN walnutpi2b_pins[] = {
     DEF_A_BOARD_PIN(0, 0, "", 0),
     DEF_A_BOARD_PIN(1, PH_3V3, "3.3v", PH_COLOR_YELLOW),
@@ -123,6 +122,14 @@ static struct BOARD_PIN_PER walnutpi2b_i2cs =
         .count = sizeof(PIN_PER_I2C) / sizeof(struct PIN_with_PER),
         .the_pins = PIN_PER_I2C,
 };
+static struct PIN_mode_rename pin_mode_renames[] = {
+    DEF_A_BOARD_PIN_MODE_RENAME(PI6, 1, "SPI1_CS1"),
+};
+static struct BOARD_mode_rename walnutpi2b_pin_mode_renames =
+    {
+        .count = sizeof(pin_mode_renames) / sizeof(struct PIN_mode_rename),
+        .the_pins = pin_mode_renames,
+};
 struct BOARD_DESC walnutpi_2b = {
     .model = "walnutpi-2b",
     .pin_num = 42,
@@ -131,4 +138,5 @@ struct BOARD_DESC walnutpi_2b = {
     .uarts = &walnutpi2b_uarts,
     .spis = &walnutpi2b_spis,
     .i2cs = &walnutpi2b_i2cs,
+    .mode_renames = &walnutpi2b_pin_mode_renames,
 };

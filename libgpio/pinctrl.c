@@ -45,6 +45,10 @@ const char *(*chip_gpio_pin_get_mode_name_by_num[])(int, int) = {
     0,
     sunxi_pin_get_mode_name_by_num,
 };
+void (*chip_mode_rename[])(int, int, char *)={
+    0,
+    sunxi_gpio_mode_rename,
+};
 
 int chip_detect()
 {
@@ -94,6 +98,10 @@ const char *core_gpio_pin_get_mode_name(int gpio_num)
 const char *core_gpio_pin_get_mode_name_by_num(int gpio_num, int mode_num)
 {
     return chip_gpio_pin_get_mode_name_by_num[chip_detect()](gpio_num, mode_num);
+}
+void gpio_mode_rename(int gpio_num, int mode_num, char *name)
+{
+    return chip_mode_rename[chip_detect()](gpio_num, mode_num, name);
 }
 
 /******************************************************************************/
@@ -189,3 +197,4 @@ const char *gpio_pin_get_mode_name_by_num(int gpio_num, int mode_num)
     strncpy(str, buf, strlen(buf));
     return str;
 }
+

@@ -539,3 +539,10 @@ void sunxi_print_who_has_function(char *name_buf, int len)
     }
     closedir(dir);
 }
+void sunxi_gpio_mode_rename(int gpio_num, int mode_num, char *name)
+{
+    sunxi_init();
+    if (_pins[gpio_num].pinctrl_desc == NULL)
+        return;
+    _pins[gpio_num].pinctrl_desc->functions[mode_num].name = name;
+}

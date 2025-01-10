@@ -29,23 +29,44 @@ struct BOARD_PIN
         .name = _name,                                      \
         .color = _color,                                    \
     }
-#define DEF_A_BOARD_PIN_PER(_pin, _mode) \
-    {                                    \
-        .pin = _pin,                     \
-        .mode = _mode,                   \
-    }
+
 struct PIN_with_PER
 {
     int pin;  // 对应开发板上哪个引脚
     int mode; // 对应该引脚的复用功能几
 };
-
 struct BOARD_PIN_PER
 {
-    int count;  // 共有几个引脚
+    int count; // 共有几个引脚
     struct PIN_with_PER *the_pins;
 };
+#define DEF_A_BOARD_PIN_PER(_pin, _mode) \
+    {                                    \
+        .pin = _pin,                     \
+        .mode = _mode,                   \
+    }
 
+
+
+struct PIN_mode_rename
+{
+    int pin;       // 对应开发板上哪个引脚
+    int mode;      // 对应该引脚的复用功能几
+    char *newname; // 新名字
+};
+struct BOARD_mode_rename
+{
+    int count; // 共有几个引脚
+    struct PIN_mode_rename *the_pins;
+};
+#define DEF_A_BOARD_PIN_MODE_RENAME(_pin, _mode, _newname) \
+    {                                                      \
+        .pin = _pin,                                       \
+        .mode = _mode,                                     \
+        .newname = _newname,                               \
+    }
+
+    
 struct BOARD_DESC
 {
     char *model;            // 设备树model字段
@@ -55,6 +76,7 @@ struct BOARD_DESC
     struct BOARD_PIN_PER *uarts;
     struct BOARD_PIN_PER *spis;
     struct BOARD_PIN_PER *i2cs;
+    struct BOARD_mode_rename *mode_renames;
 };
 extern struct BOARD_DESC walnutpi_1b;
 extern struct BOARD_DESC walnutpi_1b_emmc;
