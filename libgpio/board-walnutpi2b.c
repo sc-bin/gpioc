@@ -69,6 +69,7 @@ static struct PIN_with_PER PIN_PER_PWM[] = {
     DEF_A_BOARD_PIN_PER(36, 4),
     DEF_A_BOARD_PIN_PER(38, 4),
     DEF_A_BOARD_PIN_PER(40, 4),
+    DEF_A_BOARD_PIN_PER(42, 6),
 };
 static struct BOARD_PIN_PER walnutpi2b_pwms =
     {
