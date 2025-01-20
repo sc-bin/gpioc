@@ -96,7 +96,7 @@ void pin_set_mode_by_name(int pin_num, char *mode)
 {
     if (board_ph_to_gpio(pin_num) < 0)
         return;
-    for (int i = 0; i <= 7; i++)
+    for (int i = 0; i <= 0xf; i++)
     {
         const char *str = pin_get_mode_name_by_num(pin_num, i);
         if (str != NULL)
@@ -499,10 +499,4 @@ void print_all_gpio_on_ph()
         if (board_pins[ph].gpio_num >= 0)
             printf(" %d ", ph);
     }
-}
-void print_mode_name_inoutoff(int pin_num)
-{
-    printf("%s ", pin_get_mode_name_by_num(pin_num, 0));
-    printf("%s ", pin_get_mode_name_by_num(pin_num, 1));
-    printf("%s ", pin_get_mode_name_by_num(pin_num, 7));
 }
