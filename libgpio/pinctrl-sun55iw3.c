@@ -659,7 +659,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x3, "SPI2_CS"),
 		SUNXI_FUNCTION(0x4, "JTAG_MS"),
 		SUNXI_FUNCTION(0x5, "LCD0_D0"),
-		SUNXI_FUNCTION(0x6, "PWM6"),
+		SUNXI_FUNCTION(0x6, "PWM0-6"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 0, 0),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
 
@@ -670,7 +670,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x3, "SPI2_CLK"),
 		SUNXI_FUNCTION(0x4, "JTAG_CK"),
 		SUNXI_FUNCTION(0x5, "LCD0_D1"),
-		SUNXI_FUNCTION(0x6, "PWM7"),
+		SUNXI_FUNCTION(0x6, "PWM0-7"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 0, 1),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
 
@@ -701,7 +701,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x2, "I2C1_SCL"),
 		SUNXI_FUNCTION(0x3, "I2S0_MCLK"),
 		SUNXI_FUNCTION(0x4, "TRACE_DATA2"),
-		SUNXI_FUNCTION(0x5, "PWM8"),
+		SUNXI_FUNCTION(0x5, "PWM0-8"),
 		SUNXI_FUNCTION(0x6, "HSCL"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 0, 4),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
@@ -712,7 +712,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x2, "I2C1_SDA"),
 		SUNXI_FUNCTION(0x3, "I2S0_BCLK"),
 		SUNXI_FUNCTION(0x4, "TRACE_CLK"),
-		SUNXI_FUNCTION(0x5, "PWM9"),
+		SUNXI_FUNCTION(0x5, "PWM0-9"),
 		SUNXI_FUNCTION(0x6, "HSDA"),
 		SUNXI_FUNCTION(0x7, "PIN_TEST"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 0, 5),	/* eint */
@@ -723,7 +723,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x1, "OUT"),	
 		SUNXI_FUNCTION(0x3, "I2S0_LRCK"),
 		SUNXI_FUNCTION(0x4, "TRACE_DATA0"),
-		SUNXI_FUNCTION(0x5, "PWM10"),
+		SUNXI_FUNCTION(0x5, "PWM0-10"),
 		SUNXI_FUNCTION(0x6, "HCEC"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 0, 6),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
@@ -735,7 +735,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x3, "I2S0_DOUT0"),
 		SUNXI_FUNCTION(0x4, "I2S0_DIN1"),
 		SUNXI_FUNCTION(0x5, "LCD0_D16"),
-		SUNXI_FUNCTION(0x6, "PWM11"),
+		SUNXI_FUNCTION(0x6, "PWM0-11"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 0, 7),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
 
@@ -746,7 +746,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x3, "I2S0_DIN0"),
 		SUNXI_FUNCTION(0x4, "I2S0_DOUT1"),
 		SUNXI_FUNCTION(0x5, "LCD0_D17"),
-		SUNXI_FUNCTION(0x6, "PWM0"),
+		SUNXI_FUNCTION(0x6, "PWM0-0"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 0, 8),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
 
@@ -766,7 +766,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x1, "OUT"),	
 		SUNXI_FUNCTION(0x2, "UART0_RX"),
 		SUNXI_FUNCTION(0x3, "I2C0_SDA"),
-		SUNXI_FUNCTION(0x4, "PWM1"),
+		SUNXI_FUNCTION(0x4, "PWM0-1"),
 		SUNXI_FUNCTION(0x5, "I2S0_DIN3"),
 		SUNXI_FUNCTION(0x6, "I2S0_DOUT3"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 0, 10),	/* eint */
@@ -778,7 +778,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x2, "I2C5_SCL"),
 		SUNXI_FUNCTION(0x3, "UART7_RTS"),
 		SUNXI_FUNCTION(0x4, "SPI1_CS0"),
-		SUNXI_FUNCTION(0x5, "PWM2"),
+		SUNXI_FUNCTION(0x5, "PWM0-2"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 0, 11),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
 
@@ -788,7 +788,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x2, "I2C5_SDA"),
 		SUNXI_FUNCTION(0x3, "UART7_CTS"),
 		SUNXI_FUNCTION(0x4, "SPI1_CLK"),
-		SUNXI_FUNCTION(0x5, "PWM3"),
+		SUNXI_FUNCTION(0x5, "PWM0-3"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 0, 12),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
 
@@ -798,7 +798,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x2, "I2C4_SCL"),
 		SUNXI_FUNCTION(0x3, "UART7_TX"),
 		SUNXI_FUNCTION(0x4, "SPI1_MOSI"),
-		SUNXI_FUNCTION(0x5, "PWM4"),
+		SUNXI_FUNCTION(0x5, "PWM0-4"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 0, 13),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
 
@@ -808,7 +808,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x2, "I2C4_SDA"),
 		SUNXI_FUNCTION(0x3, "UART7_RX"),
 		SUNXI_FUNCTION(0x4, "SPI1_MISO"),
-		SUNXI_FUNCTION(0x5, "PWM5"),
+		SUNXI_FUNCTION(0x5, "PWM0-5"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 0, 14),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
 	/* bank C */
@@ -977,7 +977,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x2, "LCD0_D3"),
 		SUNXI_FUNCTION(0x3, "LVDS0_D0N"),
 		SUNXI_FUNCTION(0x4, "DSI0_DM0"),
-		SUNXI_FUNCTION(0x5, "PWM1"),
+		SUNXI_FUNCTION(0x5, "PWM0-1"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 2, 1),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
 
@@ -987,7 +987,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x2, "LCD0_D4"),
 		SUNXI_FUNCTION(0x3, "LVDS0_D1P"),
 		SUNXI_FUNCTION(0x4, "DSI0_DP1"),
-		SUNXI_FUNCTION(0x5, "PWM2"),
+		SUNXI_FUNCTION(0x5, "PWM0-2"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 2, 2),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
 
@@ -997,7 +997,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x2, "LCD0_D5"),
 		SUNXI_FUNCTION(0x3, "LVDS0_D1N"),
 		SUNXI_FUNCTION(0x4, "DSI0_DM1"),
-		SUNXI_FUNCTION(0x5, "PWM3"),
+		SUNXI_FUNCTION(0x5, "PWM0-3"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 2, 3),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
 
@@ -1007,7 +1007,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x2, "LCD0_D6"),
 		SUNXI_FUNCTION(0x3, "LVDS0_D2P"),
 		SUNXI_FUNCTION(0x4, "DSI0_CKP"),
-		SUNXI_FUNCTION(0x5, "PWM4"),
+		SUNXI_FUNCTION(0x5, "PWM0-4"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 2, 4),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
 
@@ -1017,7 +1017,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x2, "LCD0_D7"),
 		SUNXI_FUNCTION(0x3, "LVDS0_D2N"),
 		SUNXI_FUNCTION(0x4, "DSI0_CKM"),
-		SUNXI_FUNCTION(0x5, "PWM5"),
+		SUNXI_FUNCTION(0x5, "PWM0-5"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 2, 5),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
 
@@ -1027,7 +1027,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x2, "LCD0_D10"),
 		SUNXI_FUNCTION(0x3, "LVDS0_CKP"),
 		SUNXI_FUNCTION(0x4, "DSI0_DP2"),
-		SUNXI_FUNCTION(0x5, "PWM6"),
+		SUNXI_FUNCTION(0x5, "PWM0-6"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 2, 6),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
 
@@ -1037,7 +1037,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x2, "LCD0_D11"),
 		SUNXI_FUNCTION(0x3, "LVDS0_CKN"),
 		SUNXI_FUNCTION(0x4, "DSI0_DM2"),
-		SUNXI_FUNCTION(0x5, "PWM7"),
+		SUNXI_FUNCTION(0x5, "PWM0-7"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 2, 7),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
 
@@ -1047,7 +1047,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x2, "LCD0_D12"),
 		SUNXI_FUNCTION(0x3, "LVDS0_D3P"),
 		SUNXI_FUNCTION(0x4, "DSI0_DP3"),
-		SUNXI_FUNCTION(0x5, "PWM8"),
+		SUNXI_FUNCTION(0x5, "PWM0-8"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 2, 8),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
 
@@ -1057,7 +1057,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x2, "LCD0_D13"),
 		SUNXI_FUNCTION(0x3, "LVDS0_D3N"),
 		SUNXI_FUNCTION(0x4, "DSI0_DM3"),
-		SUNXI_FUNCTION(0x5, "PWM9"),
+		SUNXI_FUNCTION(0x5, "PWM0-9"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 2, 9),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
 
@@ -1067,7 +1067,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x2, "LCD0_D14"),
 		SUNXI_FUNCTION(0x3, "LVDS1_D0P"),
 		SUNXI_FUNCTION(0x4, "DSI1_DP0"),
-		SUNXI_FUNCTION(0x5, "PWM10"),
+		SUNXI_FUNCTION(0x5, "PWM0-10"),
 		SUNXI_FUNCTION(0x6, "SPI1_CS0"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 2, 10),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
@@ -1078,7 +1078,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x2, "LCD0_D15"),
 		SUNXI_FUNCTION(0x3, "LVDS1_D0N"),
 		SUNXI_FUNCTION(0x4, "DSI1_DM0"),
-		SUNXI_FUNCTION(0x5, "PWM11"),
+		SUNXI_FUNCTION(0x5, "PWM0-11"),
 		SUNXI_FUNCTION(0x6, "SPI1_CLK"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 2, 11),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
@@ -1089,7 +1089,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x2, "LCD0_D18"),
 		SUNXI_FUNCTION(0x3, "LVDS1_D1P"),
 		SUNXI_FUNCTION(0x4, "DSI1_DP1"),
-		SUNXI_FUNCTION(0x5, "PWM12"),
+		SUNXI_FUNCTION(0x5, "PWM0-12"),
 		SUNXI_FUNCTION(0x6, "SPI1_MOSI"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 2, 12),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
@@ -1100,7 +1100,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x2, "LCD0_D19"),
 		SUNXI_FUNCTION(0x3, "LVDS1_D1N"),
 		SUNXI_FUNCTION(0x4, "DSI1_DM1"),
-		SUNXI_FUNCTION(0x5, "PWM13"),
+		SUNXI_FUNCTION(0x5, "PWM0-13"),
 		SUNXI_FUNCTION(0x6, "SPI1_MISO"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 2, 13),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
@@ -1111,7 +1111,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x2, "LCD0_D20"),
 		SUNXI_FUNCTION(0x3, "LVDS1_D2P"),
 		SUNXI_FUNCTION(0x4, "DSI1_CKP"),
-		SUNXI_FUNCTION(0x5, "PWM14"),
+		SUNXI_FUNCTION(0x5, "PWM0-14"),
 		SUNXI_FUNCTION(0x6, "UART3_TX"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 2, 14),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
@@ -1122,7 +1122,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x2, "LCD0_D21"),
 		SUNXI_FUNCTION(0x3, "LVDS1_D2N"),
 		SUNXI_FUNCTION(0x4, "DSI1_CKM"),
-		SUNXI_FUNCTION(0x5, "PWM15"),
+		SUNXI_FUNCTION(0x5, "PWM0-15"),
 		SUNXI_FUNCTION(0x6, "UART3_RX"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 2, 15),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
@@ -1133,7 +1133,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x2, "LCD0_D22"),
 		SUNXI_FUNCTION(0x3, "LVDS1_CKP/PLL_Test_ckp"),
 		SUNXI_FUNCTION(0x4, "DSI1_DP2"),
-		SUNXI_FUNCTION(0x5, "PWM16"),
+		SUNXI_FUNCTION(0x5, "PWM1-0"),
 		SUNXI_FUNCTION(0x6, "UART3_RTS"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 2, 16),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
@@ -1144,7 +1144,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x2, "LCD0_D23"),
 		SUNXI_FUNCTION(0x3, "LVDS1_CKN/PLL_Test_ckn"),
 		SUNXI_FUNCTION(0x4, "DSI1_DM2"),
-		SUNXI_FUNCTION(0x5, "PWM17"),
+		SUNXI_FUNCTION(0x5, "PWM1-1"),
 		SUNXI_FUNCTION(0x6, "UART3_CTS"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 2, 17),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
@@ -1155,7 +1155,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x2, "LCD0_CLK"),
 		SUNXI_FUNCTION(0x3, "LVDS1_D3P"),
 		SUNXI_FUNCTION(0x4, "DSI1_DP3"),
-		SUNXI_FUNCTION(0x5, "PWM18"),
+		SUNXI_FUNCTION(0x5, "PWM1-2"),
 		SUNXI_FUNCTION(0x6, "UART4_TX"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 2, 18),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
@@ -1166,7 +1166,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x2, "LCD0_DE"),
 		SUNXI_FUNCTION(0x3, "LVDS1_D3N"),
 		SUNXI_FUNCTION(0x4, "DSI1_DM3"),
-		SUNXI_FUNCTION(0x5, "PWM19"),
+		SUNXI_FUNCTION(0x5, "PWM1-3"),
 		SUNXI_FUNCTION(0x6, "UART4_RX"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 2, 19),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
@@ -1175,7 +1175,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x0, "IN"),		
 		SUNXI_FUNCTION(0x1, "OUT"),	
 		SUNXI_FUNCTION(0x2, "LCD0_HSYNC"),
-		SUNXI_FUNCTION(0x3, "PWM2"),
+		SUNXI_FUNCTION(0x3, "PWM0-2"),
 		SUNXI_FUNCTION(0x4, "UART2_TX"),
 		SUNXI_FUNCTION(0x5, "UART7_RTS"),
 		SUNXI_FUNCTION(0x6, "UART4_RTS"),
@@ -1186,7 +1186,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x0, "IN"),		
 		SUNXI_FUNCTION(0x1, "OUT"),	
 		SUNXI_FUNCTION(0x2, "LCD0_VSYNC"),
-		SUNXI_FUNCTION(0x3, "PWM3"),
+		SUNXI_FUNCTION(0x3, "PWM0-3"),
 		SUNXI_FUNCTION(0x4, "UART2_RX"),
 		SUNXI_FUNCTION(0x5, "UART7_CTS"),
 		SUNXI_FUNCTION(0x6, "UART4_CTS"),
@@ -1196,7 +1196,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 	SUNXI_PIN(SUNXI_PINCTRL_PIN(D, 22),
 		SUNXI_FUNCTION(0x0, "IN"),		
 		SUNXI_FUNCTION(0x1, "OUT"),	
-		SUNXI_FUNCTION(0x2, "PWM1"),
+		SUNXI_FUNCTION(0x2, "PWM0-1"),
 		SUNXI_FUNCTION(0x3, "SPI1_HOLD"),
 		SUNXI_FUNCTION(0x4, "UART2_RTS"),
 		SUNXI_FUNCTION(0x5, "UART7_TX"),
@@ -1307,7 +1307,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x0, "IN"),		
 		SUNXI_FUNCTION(0x1, "OUT"),	
 		SUNXI_FUNCTION(0x2, "MIPI_MCLK3"),
-		SUNXI_FUNCTION(0x3, "PWM3"),
+		SUNXI_FUNCTION(0x3, "PWM0-3"),
 		SUNXI_FUNCTION(0x6, "NCSI_D12"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 3, 10),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
@@ -1360,7 +1360,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x0, "IN"),		
 		SUNXI_FUNCTION(0x1, "OUT"),	
 		SUNXI_FUNCTION(0x2, "MIPI_MCLK2"),
-		SUNXI_FUNCTION(0x3, "PWM2"),
+		SUNXI_FUNCTION(0x3, "PWM0-2"),
 		SUNXI_FUNCTION(0x6, "NCSI_D15"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 3, 15),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
@@ -1743,7 +1743,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x1, "OUT"),	
 		SUNXI_FUNCTION(0x2, "I2C4_SCL"),
 		SUNXI_FUNCTION(0x3, "UART4_TX"),
-		SUNXI_FUNCTION(0x4, "PWM1"),
+		SUNXI_FUNCTION(0x4, "PWM0-1"),
 		SUNXI_FUNCTION(0x5, "I2S3_DIN3"),
 		SUNXI_FUNCTION(0x6, "I2S2_DOUT3"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 7, 0),	/* eint */
@@ -1754,7 +1754,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x1, "OUT"),	
 		SUNXI_FUNCTION(0x2, "I2C4_SDA"),
 		SUNXI_FUNCTION(0x3, "UART4_RX"),
-		SUNXI_FUNCTION(0x4, "PWM2"),
+		SUNXI_FUNCTION(0x4, "PWM0-2"),
 		SUNXI_FUNCTION(0x5, "I2S3_DIN2"),
 		SUNXI_FUNCTION(0x6, "I2S2_DOUT2"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 7, 1),	/* eint */
@@ -1765,7 +1765,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x1, "OUT"),	
 		SUNXI_FUNCTION(0x2, "UART5_TX"),
 		SUNXI_FUNCTION(0x3, "SPI1_CS0"),
-		SUNXI_FUNCTION(0x4, "PWM3"),
+		SUNXI_FUNCTION(0x4, "PWM0-3"),
 		SUNXI_FUNCTION(0x5, "I2S2_BCLK"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 7, 2),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
@@ -1775,7 +1775,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x1, "OUT"),	
 		SUNXI_FUNCTION(0x2, "UART5_RX"),
 		SUNXI_FUNCTION(0x3, "SPI1_CLK"),
-		SUNXI_FUNCTION(0x4, "PWM4"),
+		SUNXI_FUNCTION(0x4, "PWM0-4"),
 		SUNXI_FUNCTION(0x5, "I2S2_LRCK"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 7, 3),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
@@ -1785,7 +1785,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x1, "OUT"),	
 		SUNXI_FUNCTION(0x2, "UART5_RTS"),
 		SUNXI_FUNCTION(0x3, "SPI1_MOSI"),
-		SUNXI_FUNCTION(0x4, "PWM5"),
+		SUNXI_FUNCTION(0x4, "PWM0-5"),
 		SUNXI_FUNCTION(0x5, "I2S2_DOUT0"),
 		SUNXI_FUNCTION(0x6, "I2S2_DIN1"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 7, 4),	/* eint */
@@ -1796,7 +1796,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x1, "OUT"),	
 		SUNXI_FUNCTION(0x2, "UART5_CTS"),
 		SUNXI_FUNCTION(0x3, "SPI1_MISO"),
-		SUNXI_FUNCTION(0x4, "PWM6"),
+		SUNXI_FUNCTION(0x4, "PWM0-6"),
 		SUNXI_FUNCTION(0x5, "I2S2_DIN0"),
 		SUNXI_FUNCTION(0x6, "I2S2_DOUT1"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 7, 5),	/* eint */
@@ -1807,7 +1807,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x1, "OUT"),	
 		SUNXI_FUNCTION(0x2, "UART6_TX"),
 		SUNXI_FUNCTION(0x3, "UART4_RTS"),
-		SUNXI_FUNCTION(0x4, "PWM7"),
+		SUNXI_FUNCTION(0x4, "PWM0-7"),
 		SUNXI_FUNCTION(0x5, "SPI2_CS"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 7, 6),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
@@ -1817,7 +1817,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x1, "OUT"),	
 		SUNXI_FUNCTION(0x2, "UART6_RX"),
 		SUNXI_FUNCTION(0x3, "UART4_CTS"),
-		SUNXI_FUNCTION(0x4, "PWM8"),
+		SUNXI_FUNCTION(0x4, "PWM0-8"),
 		SUNXI_FUNCTION(0x5, "SPI2_CLK"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 7, 7),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
@@ -1827,7 +1827,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x1, "OUT"),	
 		SUNXI_FUNCTION(0x2, "I2C5_SCL"),
 		SUNXI_FUNCTION(0x3, "CIR_IN"),
-		SUNXI_FUNCTION(0x4, "PWM9"),
+		SUNXI_FUNCTION(0x4, "PWM0-9"),
 		SUNXI_FUNCTION(0x5, "SPI2_MOSI"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 7, 8),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
@@ -1837,7 +1837,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x1, "OUT"),	
 		SUNXI_FUNCTION(0x2, "I2C5_SDA"),
 		SUNXI_FUNCTION(0x3, "DMIC_DATA2"),
-		SUNXI_FUNCTION(0x4, "PWM10"),
+		SUNXI_FUNCTION(0x4, "PWM0-10"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 7, 9),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
 
@@ -1846,7 +1846,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x1, "OUT"),	
 		SUNXI_FUNCTION(0x2, "OWA_OUT"),
 		SUNXI_FUNCTION(0x3, "DMIC_DATA1"),
-		SUNXI_FUNCTION(0x4, "PWM11"),
+		SUNXI_FUNCTION(0x4, "PWM0-11"),
 		SUNXI_FUNCTION(0x5, "I2S2_MCLK"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 7, 10),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
@@ -1856,7 +1856,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x1, "OUT"),	
 		SUNXI_FUNCTION(0x2, "UART3_TX"),
 		SUNXI_FUNCTION(0x3, "DMIC_DATA0"),
-		SUNXI_FUNCTION(0x4, "PWM12"),
+		SUNXI_FUNCTION(0x4, "PWM0-12"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 7, 11),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
 
@@ -1864,7 +1864,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x0, "IN"),		
 		SUNXI_FUNCTION(0x1, "OUT"),	
 		SUNXI_FUNCTION(0x2, "UART3_RX"),
-		SUNXI_FUNCTION(0x4, "PWM13"),
+		SUNXI_FUNCTION(0x4, "PWM0-13"),
 		SUNXI_FUNCTION(0x5, "SPI2_MISO"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 7, 12),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
@@ -1874,7 +1874,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x1, "OUT"),	
 		SUNXI_FUNCTION(0x2, "UART6_CTS"),
 		SUNXI_FUNCTION(0x3, "DMIC_DATA3"),
-		SUNXI_FUNCTION(0x4, "PWM14"),
+		SUNXI_FUNCTION(0x4, "PWM0-14"),
 		SUNXI_FUNCTION(0x5, "I2S2_MCLK"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 7, 13),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
@@ -1884,7 +1884,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x1, "OUT"),	
 		SUNXI_FUNCTION(0x2, "UART6_RTS"),
 		SUNXI_FUNCTION(0x3, "DMIC_CLK"),
-		SUNXI_FUNCTION(0x4, "PWM15"),
+		SUNXI_FUNCTION(0x4, "PWM0-15"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 7, 14),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
 
@@ -1893,7 +1893,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x1, "OUT"),	
 		SUNXI_FUNCTION(0x2, "UART3_RTS"),
 		SUNXI_FUNCTION(0x3, "I2C2_SCL"),
-		SUNXI_FUNCTION(0x4, "PWM16"),
+		SUNXI_FUNCTION(0x4, "PWM1-0"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 7, 15),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
 
@@ -1902,7 +1902,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x1, "OUT"),	
 		SUNXI_FUNCTION(0x2, "UART3_CTS"),
 		SUNXI_FUNCTION(0x3, "I2C2_SDA"),
-		SUNXI_FUNCTION(0x4, "PWM17"),
+		SUNXI_FUNCTION(0x4, "PWM1-1"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 7, 16),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
 	/* banks J */
@@ -2354,7 +2354,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x1, "OUT"),	
 		SUNXI_FUNCTION(0x2, "MSCID_CKN"),
 		SUNXI_FUNCTION(0x3, "I2C3_SCL"),
-		SUNXI_FUNCTION(0x4, "PWM6"),
+		SUNXI_FUNCTION(0x4, "PWM0-6"),
 		SUNXI_FUNCTION(0x5, "NCSI_D6"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 9, 22),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
@@ -2364,7 +2364,7 @@ static const struct sunxi_desc_pin sun55iw3_pins[] = {
 		SUNXI_FUNCTION(0x1, "OUT"),	
 		SUNXI_FUNCTION(0x2, "MSCID_CKP"),
 		SUNXI_FUNCTION(0x3, "I2C3_SDA"),
-		SUNXI_FUNCTION(0x4, "PWM7"),
+		SUNXI_FUNCTION(0x4, "PWM0-7"),
 		SUNXI_FUNCTION(0x5, "NCSI_D7"),
 		SUNXI_FUNCTION_IRQ_BANK(0XE, 9, 23),	/* eint */
 		SUNXI_FUNCTION(0xf, "OFF")),	
